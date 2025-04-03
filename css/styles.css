@@ -1,0 +1,234 @@
+/* -------------------- */
+/* 🔹 Configuración General */
+/* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    color: #212529; /* Texto oscuro */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* -------------------- */
+/* 🔹 Navbar */
+/* -------------------- */
+
+.navbar {
+    background: linear-gradient(135deg, #003366, #00509d);
+    padding: 15px;
+}
+
+.navbar-brand span {
+    font-size: 2.2rem; /* Tamaño profesional */
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FFD700, #B8860B); /* Degradado dorado */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand span:hover {
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+}
+
+/* 🔹 Buscador */
+.search-box input {
+    border-radius: 20px;
+    border: none;
+    padding: 8px 15px;
+    width: 250px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.search-box button {
+    background: #ffd700;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #003366;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+    background: #e6c200;
+}
+
+/* 🔹 Carrito de Compras */
+.cart-icon {
+    position: relative;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-icon span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff0000;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 7px;
+}
+
+/* -------------------- */
+/* 🔹 Botones */
+/* -------------------- */
+
+.btn-auth {
+    background: #ffd700;
+    color: #003366;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 8px 15px;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.btn-auth:hover {
+    background: #e6c200;
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: black !important;
+    transform: scale(1.05);
+}
+
+/* -------------------- */
+/* 🔹 Formularios (Login/Registro) */
+/* -------------------- */
+
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #00509d;
+    box-shadow: 0 0 5px rgba(0, 80, 157, 0.5);
+}
+
+/* -------------------- */
+/* 🔹 Tarjetas de Producto */
+/* -------------------- */
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------- */
+/* 🔹 Footer */
+/* -------------------- */
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* -------------------- */
+/* 🔹 Responsividad */
+/* -------------------- */
+
+@media (max-width: 768px) {
+    .search-box input {
+        width: 100%;
+    }
+
+    .btn-auth, .btn-outline-light {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .cart-icon {
+        font-size: 18px;
+    }
+}

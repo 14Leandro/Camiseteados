@@ -1,0 +1,174 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.admin-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: #34495e;
+}
+
+/* Botón de cerrar sesión */
+.logout {
+    background: #e74c3c;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background: #c0392b;
+}
+
+/* Contenido principal */
+.dashboard {
+    flex: 1;
+    padding: 20px;
+    background: #ecf0f1;
+}
+
+.dashboard h1 {
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de estadísticas */
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.bg-primary { background: #3498db; }
+.bg-success { background: #2ecc71; }
+.bg-warning { background: #f39c12; }
+
+/* Gráfica */
+canvas {
+    width: 100% !important;
+    max-height: 300px;
+}
+
+
+/* Estilos para la tabla de productos */
+.table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: #343a40;
+    color: white;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 12px;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table img {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: auto;
+}
+
+/* Estilo para los botones */
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: black;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-warning:hover, .btn-danger:hover {
+    filter: brightness(90%);
+}
+
+/* Mejorar la visualización en dispositivos móviles */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .table td {
+        display: block;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .table td::before {
+        font-weight: bold;
+        content: attr(data-label);
+        display: block;
+        color: #333;
+    }
+}
+
