@@ -73,49 +73,15 @@ session_start(); // Iniciar sesión para manejar el login
 </header>
 
 
-<!-- Modal de Login -->
-<div class="modal fade" id="loginModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Iniciar Sesión</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <?php if (isset($_GET['error_login'])): ?>
-                    <div class="alert alert-danger"><?= htmlspecialchars($_GET['error_login']); ?></div>
-                <?php endif; ?>
-                <form action="process/login.php" method="POST">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="password" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Modal de Registro -->
 <div class="modal fade" id="registerModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Crear Cuenta</h5>
+                <h5 class="modal-title">Registrarse</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <?php if (isset($_GET['error_register'])): ?>
-                    <div class="alert alert-danger"><?= htmlspecialchars($_GET['error_register']); ?></div>
-                <?php endif; ?>
-                <?php if (isset($_GET['success_register'])): ?>
-                    <div class="alert alert-success">Registro exitoso. Ahora puedes iniciar sesión.</div>
-                <?php endif; ?>
                 <form action="process/register.php" method="POST">
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
@@ -136,6 +102,33 @@ session_start(); // Iniciar sesión para manejar el login
     </div>
 </div>
 
+
+<!-- Modal de Login -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Iniciar Sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="process/login.php" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

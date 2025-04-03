@@ -37,6 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    session_start();
+if ($login_exitoso) {
+    $_SESSION['success'] = "Inicio de sesión exitoso.";
+} else {
+    $_SESSION['error'] = "Credenciales incorrectas. Intenta de nuevo.";
+}
+header("Location: ../index.php");
+exit();
+
     // Si llega aquí, credenciales incorrectas
     header("Location: ../index.php?error=Credenciales incorrectas");
     exit();
