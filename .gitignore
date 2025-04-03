@@ -1,0 +1,15 @@
+# Archivos de configuración local
+config/database.php
+.env
+
+# Archivos de caché
+*.log
+*.cache
+
+# Carpetas de dependencias
+node_modules/
+vendor/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
